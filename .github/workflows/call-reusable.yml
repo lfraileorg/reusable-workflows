@@ -17,4 +17,5 @@ jobs:
     runs-on: ubuntu-latest
     needs: job1
     steps:
+      - uses: hmarr/debug-action@v2
       - run: echo ${{ needs.job1.outputs.firstword }} ${{ needs.job1.outputs.output2 }}
