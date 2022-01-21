@@ -28,6 +28,6 @@ jobs:
       - id: step1
         run: echo "::set-output name=firstword::hello"        
       - id: step2
-        run: echo "::set-output name=secondword::test"
+        run: echo "::set-output name=secondword::$user"
         env:
           user: ${{ inputs.username }}
