@@ -8,6 +8,10 @@ on:
 jobs:
   job1:
     uses: lfraileorg/reusable-workflows/.github/workflows/reusable-workflow.yml@main
+    with:
+      username: lfraile
+    secrets:
+      token: ${{ secrets.FOO_TOKEN }}
 
   job2:
     runs-on: ubuntu-latest
