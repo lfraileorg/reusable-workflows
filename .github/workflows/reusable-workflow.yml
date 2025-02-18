@@ -26,8 +26,8 @@ jobs:
       output2: ${{ steps.step2.outputs.secondword }}
     steps:
       - id: step1
-        run: echo "::set-output name=firstword::hello"        
+        run: echo "firstword=hello" >> "$GITHUB_OUTPUT"    
       - id: step2
-        run: echo "::set-output name=secondword::$user"
+        run: echo "secondword=$user" >> "$GITHUB_OUTPUT"
         env:
           user: ${{ inputs.username }}
